@@ -11,7 +11,7 @@ Simple Golang Google Pubsub Project (Local Test)
 
 ## Installation
 ```
-git clone https://github.com/wildanfaz/fazpdf.git
+git clone https://github.com/wildanfaz/go-pubsub.git
 ```
 
 ## Requirements
