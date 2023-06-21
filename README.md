@@ -1,6 +1,6 @@
-# fazpdf
+# go-pubsub
 
-Simple Library for Generate Pdf and Place QR in Pdf / Png / Jpg / Docx
+Simple Golang Google Pubsub Project (Local Test)
 
 ## Table of Contents
 
@@ -14,45 +14,37 @@ Simple Library for Generate Pdf and Place QR in Pdf / Png / Jpg / Docx
 git clone https://github.com/wildanfaz/fazpdf.git
 ```
 
-## Requirements (mac)
-1. pdfcpu
-manipulate pdf in golang
+## Requirements
+1. Install python@3.9
 ```
-brew install pdfcpu
+brew install python@3.9
 ```
-2. exiftool
-change metadata
+
+2. Install [gcloud CLI](https://cloud.google.com/sdk/docs/install)
+
+3. Start gcloud
 ```
-brew install exiftool
+./google-cloud-sdk/bin/gcloud beta emulators pubsub start --project=notifier --host-port=localhost:8000
 ```
-3. pandoc
-convert docx to pdf
+
+4. Add .env
 ```
-brew install pandoc
-```
-4. basictex
-convert docx to pdf
-```
-brew install --cask basictex
-```
-5. pdftoppm
-generate thumbnail from pdf
-```
-brew install poppler
+PUBSUB_EMULATOR_HOST=localhost:8000
 ```
 
 ## Usage
+Subscribe
 ```
-go run main.go
+make s
 ```
+
+Publish
+```
+make p
+```
+
 
 ## Features
 
-- Generate QR
-- Watermarked QR
-- Input pdf then place qr on last page
-- Custom qr position and offset on last page
-- Convert png / jpg / docx to pdf
-- Generate thumbnail from first page pdf
-- Unlock encrypted pdf
-- Custom metadata pdf
+- Publish Message
+- Subscribe Topic
