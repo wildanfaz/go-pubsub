@@ -47,6 +47,8 @@ brew install python@3.9
 PUBSUB_EMULATOR_HOST=localhost:8000
 ```
 
+5. Change Variable creds in publish/publish.go and subscribe/subscribe.go to false
+
 ## Usage
 Subscribe
 ```
