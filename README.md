@@ -1,5 +1,5 @@
 # go-pubsub
-Simple Golang Google Pubsub Project (Local Test)
+Simple Golang Google Pubsub Project
 
 ## Table of Contents
 - [Installation](#installation)
@@ -7,6 +7,15 @@ Simple Golang Google Pubsub Project (Local Test)
 - [Usage](#usage)
 - [Features](#features)
 
+# With Credentials File
+1. Change Variable creds in publish/publish.go and subscribe/subscribe.go to true
+
+2. Add .env
+```
+ACCELERATION=path/to/creds.json
+```
+
+# Local
 ## Installation
 ```
 https://github.com/wildanfaz/go-pubsub.git
